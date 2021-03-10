@@ -1,0 +1,7 @@
+{
+  "name": "zequiz-mobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
