@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ranking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h4 class="ion-margin-vertical ion-text-center">World Quiz Ranking</h4>
+  <ion-list>
+    <ion-item>
+      <ion-label>#</ion-label>
+      <ion-label>Player</ion-label>
+      <ion-label>ZePoints</ion-label>
+    </ion-item>
+    <div *ngFor="let user of users; let i = index">
+      <ion-item>
+          <ion-label>{{i+1}}.</ion-label>
+          <ion-avatar class="ion-align-self-center">
+            <img src="assets/avatars/{{user.photoUrl}}">
+          </ion-avatar>
+          <ion-label>
+            {{user.nickname}}</ion-label>
+          <ion-label>{{user.currentScore}} ZP</ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

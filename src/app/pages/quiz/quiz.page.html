@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="category">{{category.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="content ion-justify-content-center ion-margin-vertical" *ngIf="category">
+    <app-category [category]="category"></app-category>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    quiz
+  </ion-row>
+</ion-content>

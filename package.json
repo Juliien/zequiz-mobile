@@ -1,11 +1,11 @@
 {
   "name": "zequiz-mobile",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "DA CORTE Julien",
+  "description": "English quizzes platform",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ionic serve --external",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -47,6 +47,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  },
-  "description": "An Ionic project"
+  }
 }

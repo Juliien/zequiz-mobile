@@ -24,3 +24,29 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+.title {
+  font-family: 'Ranchers', cursive !important;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.bg-gradient {
+  background: rgb(27,85,197);
+  background: linear-gradient(90deg, rgba(27,85,197,1) 0%, rgba(115,46,176,1) 70%);
+  border: none;
+  outline: 0;
+  color: #F5F5F5;
+}
+
+.bg-gradient:hover, .bg-gradient:focus {
+  background: rgb(115,46,176);
+  background: linear-gradient(90deg, rgba(115,46,176,1) 0%, rgba(27,85,197,1) 70%);
+  cursor: pointer;
+  color: #F5F5F5;
+}
