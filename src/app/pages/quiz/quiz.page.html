@@ -8,10 +8,24 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-row class="content ion-justify-content-center ion-margin-vertical" *ngIf="category">
-    <app-category [category]="category"></app-category>
-  </ion-row>
-  <ion-row class="ion-justify-content-center">
-    quiz
-  </ion-row>
+  <div *ngIf="category">
+    <ion-row class="relative-content ion-justify-content-center ion-margin-top">
+        <app-category [category]="category"></app-category>
+    </ion-row>
+<!--    <ion-row class="ion-justify-content-between">-->
+<!--      <div>-->
+<!--        <ion-icon name="eye-outline"></ion-icon>-->
+<!--        {{category.views}}-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <ion-icon name="star-outline"></ion-icon>-->
+<!--        <span *ngIf="category.rate == 0">Never rated</span>-->
+<!--        <span *ngIf="category.rate != 0">{{category.rate}}</span>-->
+<!--      </div>-->
+<!--    </ion-row>-->
+
+    <ion-row class="ion-justify-content-center ion-margin-vertical">
+      quiz
+    </ion-row>
+  </div>
 </ion-content>

@@ -16,9 +16,7 @@ import {CategoryComponent} from '../../components/category/category.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  exports: [
-    CategoryComponent
-  ],
+  exports: [],
   declarations: [HomePage, CategoryComponent]
 })
 export class HomePageModule {}

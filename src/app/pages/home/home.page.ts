@@ -10,10 +10,8 @@ import {UserModel} from '../../models/user.model';
 export class HomePage implements OnInit {
   viewsList: UserModel[];
   newsList: UserModel[];
-  isDark: boolean = false;
 
-  constructor(private categoryService: CategoryService) {
-  }
+  constructor(private categoryService: CategoryService) {}
 
   ngOnInit() {
     this.categoryService.getPopularCategories().subscribe(categories => this.viewsList = categories);

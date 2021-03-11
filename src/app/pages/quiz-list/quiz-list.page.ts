@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CategoryModel} from '../../models/category.model';
+import {CategoryService} from '../../services/category.service';
 
 @Component({
   selector: 'app-quiz-list',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quiz-list.page.scss'],
 })
 export class QuizListPage implements OnInit {
+  categories: CategoryModel;
 
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
+    this.categoryService.getCategories().subscribe(categories => this.categories = categories);
   }
 
 }

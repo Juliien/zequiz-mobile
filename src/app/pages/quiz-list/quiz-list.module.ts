@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { QuizListPageRoutingModule } from './quiz-list-routing.module';
 
 import { QuizListPage } from './quiz-list.page';
+import {CategoryComponent} from '../../components/category/category.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    QuizListPageRoutingModule
+    QuizListPageRoutingModule,
   ],
-  declarations: [QuizListPage]
+    declarations: [QuizListPage, CategoryComponent]
 })
 export class QuizListPageModule {}

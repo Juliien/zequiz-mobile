@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>quiz-list</ion-title>
+    <ion-title>Categories</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div *ngIf="categories">
+    <ion-row class="ion-justify-content-center" *ngFor="let category of categories">
+      <div class="relative-content ion-margin-vertical">
+        <app-category [category]="category"></app-category>
+      </div>
+    </ion-row>
+  </div>
 
 </ion-content>
