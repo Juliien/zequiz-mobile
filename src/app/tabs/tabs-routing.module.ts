@@ -20,6 +20,14 @@ const routes: Routes = [
         loadChildren: () => import('../pages/ranks/ranks.module').then( m => m.RanksPageModule)
       },
       {
+        path: 'authentication',
+        loadChildren: () => import('../pages/authentication/authentication.module').then( m => m.AuthenticationPageModule)
+      },
+      {
+        path: 'profile',
+        loadChildren: () => import('../pages/profile/profile.module').then( m => m.ProfilePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
