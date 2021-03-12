@@ -1,9 +1,28 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>authentication</ion-title>
+    <ion-title>Profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <div class="ion-margin">
+    <h3>To have access to your profile you need to bo connected</h3>
+    <ion-button color="primary" expand="block" class="ion-margin-top">Login</ion-button>
+    <p>Yo don't have account ? <strong>Register</strong></p>
+  </div>
+  <ion-list class="ion-margin-end">
+    <ion-item>
+      <ion-label>About</ion-label>
+      <ion-icon name="help-outline" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label><a href="https://fr.freepik.com" target="_blank">Image Creator</a></ion-label>
+      <ion-icon name="open-outline" slot="end"></ion-icon>
 
+    </ion-item>
+    <ion-item>
+      <ion-label>Terms & Conditions</ion-label>
+      <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>
