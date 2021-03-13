@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ModalController} from '@ionic/angular';
 import {LoginComponent} from '../../components/login/login.component';
+import {RegisterComponent} from '../../components/register/register.component';
 
 @Component({
   selector: 'app-authentication',
@@ -14,10 +15,17 @@ export class AuthenticationPage implements OnInit {
   ngOnInit() {
   }
 
-  async presentModal() {
+  async presentLoginModal() {
     const modal = await this.modalController.create({
       component: LoginComponent,
-      cssClass: 'my-custom-class',
+      swipeToClose: true,
+    });
+    return await modal.present();
+  }
+
+  async presentRegisterModal() {
+    const modal = await this.modalController.create({
+      component: RegisterComponent,
       swipeToClose: true,
     });
     return await modal.present();

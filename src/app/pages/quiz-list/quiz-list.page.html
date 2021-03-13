@@ -11,11 +11,21 @@
   <div class="spinner" *ngIf="!categories">
     <ion-spinner name="lines"></ion-spinner>
   </div>
-  <div *ngIf="categories">
-    <ion-row class="ion-justify-content-center" *ngFor="let category of categories | filter:item">
+  <!-- ADS -->
+  <ion-card class="ion-padding">PUB</ion-card>
+
+  <div *ngIf="categories" class="ion-margin">
+    <ion-row class="ion-justify-content-center" *ngFor="let category of categories | filter: item">
       <div class="relative-content ion-margin-vertical">
         <app-category [category]="category"></app-category>
       </div>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center ion-margin-vertical">
+      <ion-text *ngIf="(categories | filter: item).length === 0">
+        <h2>Could not find "{{item}}" category</h2>
+        <p>Check spelling or use other keywords.</p>
+      </ion-text>
     </ion-row>
   </div>
 </ion-content>

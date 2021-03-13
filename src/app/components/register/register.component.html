@@ -1,6 +1,30 @@
-<p>
-  By selecting Agree and Sign ou below, I agree to ZeQuiz’s
-  <a routerLink="/legal">Terms and Conditions.</a>
-  <!--Payments Terms of Service, -->
-</p>
+<div class="ion-margin">
+  <ion-button (click)="dismissModal()">
+    <ion-icon name="close-outline"></ion-icon>
+  </ion-button>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input formControlName="password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item *ngIf="errorMessage">
+      <ion-label color="danger" >{{errorMessage}}</ion-label>
+      <ion-icon name="alert-circle-outline" slot="end" color="danger"></ion-icon>
+    </ion-item>
+
+    <p>
+      By selecting Agree and Sign up below, I agree to ZeQuiz’s
+      <a (click)="openLegal()">Terms and Conditions.</a>
+    </p>
+    <ion-button type="submit"  expand="block"  class="ion-margin-top" [disabled]="loginForm.invalid">Agree and Sign up</ion-button>
+  </form>
+
+</div>
+
 

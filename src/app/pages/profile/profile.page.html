@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div *ngIf="userService.currentUser">
+    <div class="header">
+      <h2>{{userService.currentUser.nickname}}</h2>
+    </div>
+    <div class="flex">
+      <div class="img-box">
+        <img src="assets/avatars/{{userService.currentUser.photoUrl}}">
+      </div>
+    </div>
 
+    <div class="zp-center">
+      <div class="points">
+        <ion-badge color="dark">{{userService.currentUser.currentScore}}</ion-badge>
+        <p>ZePoints</p>
+      </div>
+    </div>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Personal information</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Member since {{userService.currentUser.createDate.slice(0, 10)}}</p>
+        <p>Email : {{userService.currentUser.email}}</p>
+        <p>Plan : {{userService.currentUser.permissionLevel}}</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button class="ion-margin" color="primary" expand="block">Sign out</ion-button>
+    <ion-text color="medium" class="ion-text-center">
+      <p>version 0.0.1</p>
+    </ion-text>
+
+  </div>
 </ion-content>
+

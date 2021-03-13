@@ -43,7 +43,8 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('token', user.token);
       localStorage.setItem('user_id', user._id);
       localStorage.setItem('permissions', user.permissionLevel);
-      this.router.navigate(['home']).then();
+      this.router.navigate(['/tabs/home']).then();
+      this.dismissModal();
     }, (error) => {
       switch (error.status) {
         case 401:
