@@ -2,15 +2,20 @@
   <ion-toolbar>
     <ion-title>Categories</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar animated showCancelButton="never" [(ngModel)]="item"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="spinner" *ngIf="!categories">
+    <ion-spinner name="lines"></ion-spinner>
+  </div>
   <div *ngIf="categories">
-    <ion-row class="ion-justify-content-center" *ngFor="let category of categories">
+    <ion-row class="ion-justify-content-center" *ngFor="let category of categories | filter:item">
       <div class="relative-content ion-margin-vertical">
         <app-category [category]="category"></app-category>
       </div>
     </ion-row>
   </div>
-
 </ion-content>

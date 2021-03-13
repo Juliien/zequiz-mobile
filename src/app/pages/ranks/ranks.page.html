@@ -6,7 +6,11 @@
 
 <ion-content [fullscreen]="true">
   <h4 class="ion-margin-vertical ion-text-center">World Quiz Ranking</h4>
-  <ion-list class="ion-margin-end">
+
+  <div class="spinner" *ngIf="!users">
+    <ion-spinner name="lines"></ion-spinner>
+  </div>
+  <ion-list class="ion-margin-end" *ngIf="users">
     <ion-item>
       <ion-label>#</ion-label>
       <ion-label>Player</ion-label>

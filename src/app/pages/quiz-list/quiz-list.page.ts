@@ -9,6 +9,7 @@ import {CategoryService} from '../../services/category.service';
 })
 export class QuizListPage implements OnInit {
   categories: CategoryModel;
+  item: string;
 
   constructor(private categoryService: CategoryService) { }
 

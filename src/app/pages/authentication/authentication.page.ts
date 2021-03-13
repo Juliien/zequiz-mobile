@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ModalController} from '@ionic/angular';
+import {LoginComponent} from '../../components/login/login.component';
 
 @Component({
   selector: 'app-authentication',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthenticationPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }
 
+  async presentModal() {
+    const modal = await this.modalController.create({
+      component: LoginComponent,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,
+    });
+    return await modal.present();
+  }
 }

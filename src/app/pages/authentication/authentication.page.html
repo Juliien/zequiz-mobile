@@ -7,8 +7,8 @@
 <ion-content [fullscreen]="true">
   <div class="ion-margin">
     <h3>To have access to your profile you need to bo connected</h3>
-    <ion-button color="primary" expand="block" class="ion-margin-top">Login</ion-button>
-    <p>Yo don't have account ? <strong>Register</strong></p>
+    <ion-button color="primary" expand="block" class="ion-margin-top" (click)="presentModal()">Sign in</ion-button>
+    <p>Don't have an account ? <strong><a>Sign up</a></strong></p>
   </div>
   <ion-list class="ion-margin-end">
     <ion-item routerLink="../home">
