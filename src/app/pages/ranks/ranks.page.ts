@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../../services/user.service';
+import {UserModel} from '../../models/user.model';
 
 @Component({
   selector: 'app-ranks',
@@ -7,7 +8,7 @@ import {UserService} from '../../services/user.service';
   styleUrls: ['./ranks.page.scss'],
 })
 export class RanksPage implements OnInit {
-  users: any[] = [];
+  users: UserModel[] = [];
 
   constructor(private userService: UserService) { }
 

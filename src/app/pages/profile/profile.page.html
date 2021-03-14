@@ -26,9 +26,23 @@
         <p>Plan : {{userService.currentUser.permissionLevel}}</p>
       </ion-card-content>
     </ion-card>
-    <ion-button class="ion-margin" color="primary" expand="block">Sign out</ion-button>
+
+    <ion-list class="ion-margin-end">
+      <ion-item routerLink="../home">
+        <ion-label>About</ion-label>
+      </ion-item>
+
+      <ion-item href="https://fr.freepik.com" target="_blank">
+        <ion-label>Image Creator</ion-label>
+      </ion-item>
+
+      <ion-item routerLink="../../legal">
+        <ion-label>Terms & Conditions</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button class="ion-margin" color="primary" expand="block" (click)="logout()">Sign out</ion-button>
     <ion-text color="medium" class="ion-text-center">
-      <p>version 0.0.1</p>
+      <p>VERSION 0.0.1</p>
     </ion-text>
 
   </div>
