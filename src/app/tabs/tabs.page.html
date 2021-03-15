@@ -1,31 +1,30 @@
 <ion-tabs>
-
   <ion-tab-bar slot="bottom">
+
     <ion-tab-button tab="home">
-      <ion-icon name="extension-puzzle-outline"></ion-icon>
-      <ion-label>Quizzes</ion-label>
+      <ion-icon name="home"></ion-icon>
+      <ion-label>ZeQuiz</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="all">
-      <ion-icon name="search-outline"></ion-icon>
+      <ion-icon name="search"></ion-icon>
       <ion-label>Categories</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="ranks">
-      <ion-icon name="trophy-outline"></ion-icon>
+      <ion-icon name="trophy"></ion-icon>
       <ion-label>Ranking</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="authentication" *ngIf="!this.authenticationService.isLogged()">
-      <ion-icon name="person-outline"></ion-icon>
+      <ion-icon name="person"></ion-icon>
       <ion-label>Connexion</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="profile" *ngIf="this.authenticationService.isLogged()">
-      <ion-icon name="person-outline"></ion-icon>
+      <ion-icon name="person"></ion-icon>
       <ion-label>Profile</ion-label>
     </ion-tab-button>
 
   </ion-tab-bar>
-
 </ion-tabs>

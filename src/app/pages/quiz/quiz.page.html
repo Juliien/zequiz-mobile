@@ -12,32 +12,42 @@
     <ion-row class="relative-content ion-justify-content-center ion-margin-top">
         <app-category [category]="category"></app-category>
     </ion-row>
-<!--    <ion-row class="ion-justify-content-between">-->
-<!--      <div>-->
-<!--        <ion-icon name="eye-outline"></ion-icon>-->
-<!--        {{category.views}}-->
-<!--      </div>-->
-<!--      <div>-->
-<!--        <ion-icon name="star-outline"></ion-icon>-->
-<!--        <span *ngIf="category.rate == 0">Never rated</span>-->
-<!--        <span *ngIf="category.rate != 0">{{category.rate}}</span>-->
-<!--      </div>-->
-<!--    </ion-row>-->
 
-    <ion-row class="ion-justify-content-center ion-margin-vertical">
-      <ion-card>
-        <ion-card-header>
-          <h4>Quelle est ma plus grande source de stress ? Quelles actions puis-je mettre en place pour y faire face ?</h4>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-row class="ion-justify-content-center">
-            <ion-button>True</ion-button>
-            <ion-button>False</ion-button>
-          </ion-row>
+    <div class="ion-margin-horizontal">
 
-        </ion-card-content>
-      </ion-card>
-    </ion-row>
+      <ion-row class="ion-justify-content-center">
+        <div class="ion-margin-horizontal">
+          <ion-icon name="eye-outline" color="primary"></ion-icon>
+          {{category.views}}
+        </div>
+        <div class="ion-margin-horizontal">
+          <ion-icon name="star" color="primary"></ion-icon>
+          <span *ngIf="category.rate == 0">never rated</span>
+          <span *ngIf="category.rate != 0">{{category.rate}}</span>
+        </div>
+      </ion-row>
+
+      <ion-text>
+        <h3>Play Alone ?</h3>
+      </ion-text>
+      <ion-button color="secondary" expand="block" (click)="startQuiz()">Start Quiz</ion-button>
+      <ion-text>
+        <h3>ZeVersus Mode ?</h3>
+      </ion-text>
+      <ion-button color="secondary" expand="block" (click)="goToVS()">Create ZeVersus Room</ion-button>
+    </div>
+
+<!--    <ion-card>-->
+<!--      <ion-card-header>-->
+<!--        <h4>Quelle est ma plus grande source de stress ? Quelles actions puis-je mettre en place pour y faire face ?</h4>-->
+<!--      </ion-card-header>-->
+<!--      <ion-card-content>-->
+<!--        <ion-row class="ion-justify-content-center">-->
+<!--          <ion-button>True</ion-button>-->
+<!--          <ion-button>False</ion-button>-->
+<!--        </ion-row>-->
+<!--      </ion-card-content>-->
+<!--    </ion-card>-->
     <!-- ADS -->
     <ion-card class="ion-padding">PUB</ion-card>
   </div>

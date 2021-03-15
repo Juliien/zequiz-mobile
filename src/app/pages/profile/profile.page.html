@@ -27,24 +27,31 @@
       </ion-card-content>
     </ion-card>
 
+    <ion-text color="medium"><p class="ion-margin-horizontal">ZeQuiz</p></ion-text>
     <ion-list class="ion-margin-end">
+      <ion-item routerLink="../home">
+        <ion-label>History</ion-label>
+      </ion-item>
       <ion-item routerLink="../home">
         <ion-label>About</ion-label>
       </ion-item>
+    </ion-list>
 
+    <ion-text color="medium"><p class="ion-margin-horizontal">Legal</p></ion-text>
+    <ion-list class="ion-margin-end">
       <ion-item href="https://fr.freepik.com" target="_blank">
         <ion-label>Image Creator</ion-label>
       </ion-item>
-
       <ion-item routerLink="../../legal">
         <ion-label>Terms & Conditions</ion-label>
       </ion-item>
     </ion-list>
+
     <ion-button class="ion-margin" color="primary" expand="block" (click)="logout()">Sign out</ion-button>
+
     <ion-text color="medium" class="ion-text-center">
       <p>VERSION 0.0.1</p>
     </ion-text>
-
   </div>
 </ion-content>
 
